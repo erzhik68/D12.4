@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рассылка</title>
+</head>
+<body>
+    <h2>Здравствуй, {{user_name}}. Новая статья в твоем любимом разделе!</h2>
+    <p><a href="http://127.0.0.1:8000{% url 'post_detail' post.id %}">{{post.post_title}}</a></p>
+    <p>{{post.post_text|truncatechars:50}}</p>
+</body>
+</html>
